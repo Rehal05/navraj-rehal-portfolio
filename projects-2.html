@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f06, #f79);
+    color: #fff;
+    height: 1500px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro {
+    max-width: 90%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+}
+
+.intro h2 {
+    font-size: 1.5em;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.project-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-box h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+.project-box p {
+    font-size: 1em;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.footer-section img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-section p {
+    margin: 5px 0 0;
+}
+
+.footer-section a {
+    color: #fff; /* Make footer links white */
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.rps-img{
+    height: 350px;
+    width: 150px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .header-text {
+        margin-top: 10px;
+    }
+
+    .intro img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .intro h2 {
+        font-size: 1.2em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .project-box {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text {
+        font-size: 18px;
+    }
+
+    .dropbtn {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .intro img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .intro {
+        padding: 10px;
+    }
+
+    .intro h1 {
+        font-size: 1.5em;
+    }
+
+    .intro h2 {
+        font-size: 1em;
+    }
+
+    .intro p {
+        font-size: 0.9em;
+    }
+
+    .project-box {
+        width: calc(100% - 40px);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+                <a href="projects.html">Projects</a>
+                <a href="certifications.html">Certifications</a>
+            </div>
+        </div>
+        <div class="header-text">Projects</div>
+    </header>
+    
+    <main>
+        <h1>My Projects</h1>
+        <div class="projects">
+            <div class="project-box">
+                <img src="e-commerce.jpg" alt="Project 1 Image">
+                <h2>E-Commerce Webpage (Full Stack)</h2>
+                <p>Developed a full stack e-commerce website using HTML, CSS, and JavaScript, allowing users to browse and search for products, customize options, manage their cart, and track orders. Implemented advanced features including modules, object-oriented programming, callbacks, promises, and async/await, alongside backend development and external libraries.</p>
+            </div>
+            <div class="project-box">
+                <img src="youtube-project.jpg" alt="Project 2 Image">
+                <h2>Video Streaming Interface Replica (Front End)</h2>
+                <p> Developed a video streaming interface compatible with multiple devices, showcasing and connecting to various video genres. Built using HTML and CSS, leveraging CSS Grid, Flexbox, positioning techniques, responsive design, and media queries to ensure cross-device functionality. Progressed foundational HTML and CSS skills to structure content and style elements.</p>
+            </div>
+            <div class="project-box">
+                <img class="rps-img"src="rps-project.jpg" alt="Project 3 Image">
+                <h2>Rock Paper Scissors Webpage</h2>
+                <p>Developed an interactive game using HTML, CSS, and JavaScript. Implemented game logic and dynamic DOM manipulation to display user and computer choices and results. Included score tracking with reset functionality. Utilized built-in JavaScript objects for randomization and ensured responsive design for compatibility across devices.</p>
+            </div>
+            <div class="project-box">
+                <img src="pong-project.jpg" alt="Project 4 Image">
+                <h2>Retro Pong Game (Python)</h2>
+                <p>Developed a retro two player ping pong game using a school game development library. Key aspects included the implementation of core game mechanics (collision detection, scoring and ball movement) and multiplayer functionality that includes two player interaction ensuring smooth and responsive gameplay</p>
+            </div>
+            <div class="project-box">
+                <img src="blackjack-project.jpg" alt="Project 5 Image">
+                <h2>Blackjack Simulation (Java)</h2>
+                <p>A java based one player game with the dealer as the computer focusing on java basics including inheritance, class development and code implementation. Key elements included dealer logic which involved ensuring the computer follows the standard Blackjack rules, and game mechanics that included blackjack rules, card dealing, hit/stand logic and user betting.</p>
+            </div>
+            <!-- Add more project boxes as needed -->
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-section">
+            <img src="gmail-icon.jpg" alt="Gmail Icon">
+            <p>navrajrehal05@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <img src="github-icon.webp" alt="GitHub Icon">
+            <p><a href="https://github.com/Rehal05" target="_blank">GitHub</a></p>
+        </div>
+        <div class="footer-section">
+            <img src="phone-icon.jpg" alt="Phone Icon">
+            <p>516-800-7935</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
